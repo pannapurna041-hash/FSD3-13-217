@@ -31,3 +31,13 @@ console.log(toWords(3));
 console.log(toWords(8));
 
 
+//create another function that takes number and show 
+
+const rollNum = "250031000497";
+const digits = String(rollNum).split("");
+console.log(digits);
+let inWords ="";
+  digits.forEach((d) => {
+   inWords +=" " + toWords(Number(d));
+ });
+ console.log(inWords);
