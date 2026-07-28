@@ -30,6 +30,7 @@ console.log(toWords(5));
 console.log(toWords(3));
 console.log(toWords(8));
 
+const toW
 
 //create another function that takes number and show 
 
@@ -41,3 +42,6 @@ let inWords ="";
    inWords +=" " + toWords(Number(d));
  });
  console.log(inWords);
+
+
+
