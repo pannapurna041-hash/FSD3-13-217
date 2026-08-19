@@ -12,7 +12,14 @@
 
     const addToCart = async (item) => {
         const products = await getCart();
+        const productFound = products.find((p) => p.id === item.id);
+        if(productFound){
+          productFound.qty += item.qty;
+          console.log("Product in cart quantity updated")
+        } else{
         products.push(item);
+        console.log("Product added successfully")
+        }
         await saveCart(products);
     };
     const showCart = () => {
@@ -49,7 +56,8 @@
         price: Number(price),
         qty: Number(qty),
        };
-       console.log(product);
+      // console.log(product);
+      await addToCart(product);
        break;
      case 2:
        showCart();
