@@ -15,6 +15,15 @@
         products.push(item);
         await saveCart(products);
     };
+    const showCart = () => {
+       console.log('show cart');
+    };
+    const updateCart =  () => {
+        console.log('update quantity');
+    };
+    const deleteFromCart =  () => {
+        console.log('show cart');
+    };    
 
  const main = async () => {
     const cin = readline.createInterface({ input: stdin, output: stdout });
@@ -29,16 +38,27 @@
    choice = await cin.question ("Enter your choice:");
    switch (Number(choice)) {
      case 1:
-       console.log("add to cart");
+       let data = await cin.question("Enter id,name,price,qty:");
+       let p=data.split(",");
+       let q = p.map((item) => item.trim());
+       let [id, name, price, qty] = q;
+       console.log(id, name, price, qty);
+       const product = {
+        id: Number(id),
+        name,
+        price: Number(price),
+        qty: Number(qty),
+       };
+       console.log(product);
        break;
      case 2:
-       console.log("show cart items");
+       showCart();
        break;
      case 3:
-       console.log("remove items");
+       deleteFromCart();
        break;
      case 4:
-       console.log("update quantity");
+       updateCart();
        break;
      case 5:
        console.log("See you later...😃");
@@ -46,8 +66,7 @@
      default:
        console.log("Invalid choice! try again 🔴");
    }
-    }while (choice != "5"
-    );
+    }while (choice != "5");
    cin.close();
  };
 
