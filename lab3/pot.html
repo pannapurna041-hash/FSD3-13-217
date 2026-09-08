@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Matka - Natural Water Pot</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fff8ef;
+            color: #3d2415;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #7b3f00;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h1 {
+            font-size: 26px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 10%;
+            gap: 50px;
+            background: linear-gradient(135deg, #fff8ef, #ffe4c4);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text .tag {
+            color: #d35400;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h2 {
+            font-size: 55px;
+            line-height: 1.1;
+            color: #7b3f00;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 19px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #654321;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #d35400;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background: #7b3f00;
+        }
+
+        /* MATKA */
+        .pot-area {
+            width: 350px;
+            height: 470px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .matka {
+            width: 245px;
+            height: 300px;
+            background: linear-gradient(to right,
+                    #9e4f22,
+                    #d9824b,
+                    #a95023);
+            border-radius: 45% 45% 42% 42%;
+            position: relative;
+            box-shadow: 15px 20px 30px rgba(80, 40, 10, 0.3);
+        }
+
+        /* MATKA NECK */
+        .matka::before {
+            content: "";
+            position: absolute;
+            width: 105px;
+            height: 70px;
+            background: #a95526;
+            top: -55px;
+            left: 70px;
+            border-radius: 25px 25px 8px 8px;
+        }
+
+        /* MATKA RIM */
+        .matka::after {
+            content: "";
+            position: absolute;
+            width: 125px;
+            height: 25px;
+            background: #713512;
+            top: -65px;
+            left: 60px;
+            border-radius: 50%;
+        }
+
+        /* POT DECORATION */
+        .design {
+            position: absolute;
+            top: 105px;
+            left: 25px;
+            right: 25px;
+            text-align: center;
+            color: #ffe0b2;
+            font-size: 35px;
+        }
+
+        .line {
+            height: 6px;
+            background: #743515;
+            margin: 15px 25px;
+            border-radius: 10px;
+        }
+
+        /* BENEFITS */
+        .benefits {
+            padding: 80px 10%;
+            text-align: center;
+            background: white;
+        }
+
+        .benefits h2 {
+            font-size: 38px;
+            color: #7b3f00;
+            margin-bottom: 45px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            padding: 35px 25px;
+            background: #fff8ef;
+            border-radius: 18px;
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #a94f19;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #654321;
+        }
+
+        /* CULTURE SECTION */
+        .culture {
+            padding: 80px 10%;
+            background: #f5dfc5;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .culture-text {
+            flex: 1;
+        }
+
+        .culture-text h2 {
+            color: #7b3f00;
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .culture-text p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .quote {
+            background: #fff8ef;
+            padding: 25px;
+            border-left: 6px solid #d35400;
+            border-radius: 8px;
+            font-style: italic;
+            margin-top: 25px;
+        }
+
+        .culture-art {
+            flex: 1;
+            text-align: center;
+            font-size: 130px;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 70px 20px;
+            text-align: center;
+            background: #7b3f00;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .cta .btn {
+            background: #ffd166;
+            color: #5a2d0c;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #3d2415;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .culture {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .hero-text h2 {
+                font-size: 40px;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 14px;
+            }
+
+            .pot-area {
+                transform: scale(0.8);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <h1>🏺 Desi Matka</h1>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#culture">Culture</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <div class="tag">TRADITION • NATURE • HEALTH</div>
+
+            <h2>
+                Pure Water,<br>
+                Indian Tradition.
+            </h2>
+
+            <p>
+                Experience the timeless tradition of storing drinking
+                water in a natural clay pot. Our traditional Matka
+                keeps water naturally cool while bringing a touch of
+                Indian heritage to your home.
+            </p>
+
+            <a href="#benefits" class="btn">
+                Explore Benefits
+            </a>
+
+            <a href="#contact" class="btn">
+                Get a Matka
+            </a>
+
+        </div>
+
+
+        <!-- MATKA -->
+        <div class="pot-area">
+
+            <div class="matka">
+
+                <div class="design">
+                    ✦ ॐ ✦
+                </div>
+
+                <div class="line"></div>
+                <div class="line"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BENEFITS -->
+    <section class="benefits" id="benefits">
+
+        <h2>Why Choose a Matka?</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💧</div>
+                <h3>Naturally Cool</h3>
+                <p>
+                    The porous clay allows gradual evaporation,
+                    helping water stay naturally cool.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🌱</div>
+                <h3>Eco Friendly</h3>
+                <p>
+                    Made from natural clay, traditional pots are
+                    reusable and environmentally friendly.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🇮🇳</div>
+                <h3>Indian Heritage</h3>
+                <p>
+                    Matkas have been part of Indian homes and
+                    traditions for generations.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CULTURE -->
+    <section class="culture" id="culture">
+
+        <div class="culture-text">
+
+            <h2>A Tradition That Connects Us</h2>
+
+            <p>
+                The Indian Matka is more than just a container for
+                water. It represents simplicity, sustainability and
+                the connection between people and nature.
+            </p>
+
+            <p>
+                From rural homes to modern kitchens, the humble
+                earthen pot continues to be a beautiful part of
+                Indian lifestyle.
+            </p>
+
+            <div class="quote">
+                "Simple living, natural cooling, timeless tradition."
+            </div>
+
+        </div>
+
+        <div class="culture-art">
+            🏺
+        </div>
+
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section class="cta" id="contact">
+
+        <h2>Bring Tradition Home</h2>
+
+        <p>
+            Choose a natural Indian Matka for your everyday water.
+        </p>
+
+        <a href="#" class="btn">
+            Buy Now
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Desi Matka | Made with ❤️ in India
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
