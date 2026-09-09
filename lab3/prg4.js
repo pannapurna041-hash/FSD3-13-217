@@ -1,4 +1,5 @@
 import http from "http";
+import { reviews, items } from "./data.js";
 const server = http.createServer((req, res) => {
   const product = {
     id: 1,
@@ -7,9 +8,16 @@ const server = http.createServer((req, res) => {
     rating: 4.7,
     review: 225,
   };
+  
   if (req.url === "/api/products") {
-    res.end(JSON.stringify(product));
-  } else {
+  //  res.end(JSON.stringify(products));
+  res.end(JSON.stringify(items));
+  }
+  else if(req.url==='/api/reviews'){
+    res.end(JSON.stringify(reviews));
+  } 
+  
+  else {
     res.statusCode = 404;
     res.end();
   }
