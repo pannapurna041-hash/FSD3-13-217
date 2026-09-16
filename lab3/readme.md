@@ -72,3 +72,11 @@ server return data only not html contents because html content will be written b
   review:200
 }
 ```
+
+## Headers
+Header is used to tell the client, the type of data sent by the server.It may be html file,json data,plain text file,css file,any tokens (for login)
+1. text/plain -> text file
+2. text/html ->html contents/file
+3. application/json -> json contents/file
+4. text/css -> stylesheet
+5. application/form-data -> for uploading file
