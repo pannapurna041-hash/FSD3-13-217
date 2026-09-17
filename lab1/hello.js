@@ -14,6 +14,6 @@ function sum(a,b) {
   //  return a+b;
 //}
 sayHello("Annapurna");
-sayHi("Arun Kumar");
+sayHi("Diksha");
 console.log(`sum of 2 and 5 is ${sum(2,5)}`);
 
