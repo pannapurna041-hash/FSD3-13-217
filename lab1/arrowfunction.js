@@ -22,15 +22,13 @@ const toWords = (digit) =>{
     case 9:
       return "Nine";
     default:
-      return "Invalid Number";
+      return "Invalid ";
   }
-}
+};
 
 console.log(toWords(5));
 console.log(toWords(3));
 console.log(toWords(8));
-
-const toW
 
 //create another function that takes number and show 
 
