@@ -23,13 +23,13 @@
         await saveCart(products);
     };
     const showCart = () => {
-       console.log('show cart');
+       console.log('Show cart');
     };
     const updateCart =  () => {
-        console.log('update quantity');
+        console.log('Update quantity');
     };
     const deleteFromCart =  () => {
-        console.log('show cart');
+        console.log('Show cart');
     };    
 
  const main = async () => {
