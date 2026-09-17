@@ -27,10 +27,10 @@ const main = () => {
   writeData();
   console.log("end");
   new Promise((resolve, reject) => {
-    console.log("i am Promise 1");
+    console.log("I am Promise 1");
   });
   new Promise((resolve, reject) => {
-    console.log("i am Promise 2");
+    console.log("I am Promise 2");
   });
 };
 main();
