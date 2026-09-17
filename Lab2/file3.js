@@ -18,7 +18,7 @@ const appendData = async (fname, contents) => {
     await appendFile(fname,"\n"+content)
 };
 
-await writeData("happy.txt", "I am very happy");
+await writeData("happy.txt", "I am so much happy");
 await readData("happy.txt")
 await appendData("happy.txt", "FSD is intersting");
 await readData("happy.txt");
