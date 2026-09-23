@@ -80,3 +80,12 @@ Header is used to tell the client, the type of data sent by the server.It may be
 3. application/json -> json contents/file
 4. text/css -> stylesheet
 5. application/form-data -> for uploading file
+
+## GET :
+no parameter pass to the server when we receive all items
+## POST :
+to add records we pass the value from body section in json format of api tester (Echo api)   
+## Delete :
+ to delete any product we pass parameter that is id of the product from url
+## PUT/PATCH : 
+we pass id from url and data to update from body
