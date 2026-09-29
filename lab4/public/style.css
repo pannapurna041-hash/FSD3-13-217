@@ -1,0 +1,32 @@
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#1f2937;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.navbar{background:#172554;color:white;padding:15px 7%;display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:10}
+.logo{font-size:23px;font-weight:800;color:#fbbf24}
+.nav-links{display:flex;flex-wrap:wrap;gap:18px;list-style:none}
+.nav-links a{padding:7px 10px;border-radius:7px;font-weight:600}
+.nav-links a:hover,.nav-links a.active{background:#2563eb}
+.container{width:min(1100px,90%);margin:45px auto}
+.hero{background:linear-gradient(135deg,#1d4ed8,#7c3aed);color:white;border-radius:20px;padding:55px 8%;text-align:center;box-shadow:0 12px 30px #0002}
+.hero h1{font-size:42px;margin-bottom:12px}
+.hero p{font-size:18px;max-width:700px;margin:0 auto 25px}
+.btn{display:inline-block;background:#fbbf24;color:#172554;padding:12px 22px;border-radius:8px;font-weight:800;border:none;cursor:pointer}
+.section-title{text-align:center;margin-bottom:25px;color:#172554;font-size:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px #00000012}
+.card h3{color:#1d4ed8;margin:10px 0}
+.icon{font-size:35px}
+.form-box{max-width:650px;margin:auto;background:white;padding:30px;border-radius:16px;box-shadow:0 5px 20px #00000012}
+label{display:block;font-weight:700;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px}
+textarea{min-height:120px;resize:vertical}
+.price{font-size:32px;font-weight:800;color:#7c3aed;margin:10px 0}
+.price small{font-size:14px;color:#64748b}
+.badge{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:4px 10px;border-radius:20px;font-size:13px;font-weight:700}
+footer{margin-top:60px;background:#0f172a;color:#cbd5e1;padding:35px 7%;text-align:center}
+.social{display:flex;justify-content:center;gap:14px;margin:18px 0}
+.social a{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#1e293b;color:white;font-size:19px}
+.social a:hover{background:#2563eb}
+.notice{background:#ecfeff;border-left:4px solid #06b6d4;padding:15px;margin-bottom:25px;border-radius:6px}
+@media(max-width:700px){.navbar{flex-direction:column;align-items:flex-start}.nav-links{gap:5px}.nav-links a{display:block;padding:6px}.hero h1{font-size:31px}.container{margin:30px auto}}

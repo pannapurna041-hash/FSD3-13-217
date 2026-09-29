@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration | BrightPath Tuition Classes</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="index.html">BrightPath Tuition</a>
+  <ul class="nav-links"><li><a class="" href="index.html">Home</a></li><li><a class="active" href="registration.html">Registration</a></li><li><a class="" href="login.html">Login</a></li><li><a class="" href="courses.html">Courses</a></li><li><a class="" href="feedback.html">Feedback</a></li><li><a class="" href="prices.html">Price Details</a></li></ul>
+</header>
+<main class="container">
+<h1 class="section-title">Student Registration</h1>
+<div class="form-box">
+  <div class="notice">Fill in your details to register for our tuition classes.</div>
+  <form onsubmit="alert('Registration submitted successfully!'); return false;">
+    <label for="name">Full Name</label><input id="name" type="text" placeholder="Enter your full name" required>
+    <label for="email">Email</label><input id="email" type="email" placeholder="Enter your email" required>
+    <label for="phone">Phone Number</label><input id="phone" type="tel" placeholder="Enter your phone number" required>
+    <label for="class">Class / Course</label>
+    <select id="class" required><option value="">Select a course</option><option>Class 9–10</option><option>Class 11–12 Science</option><option>JEE Foundation</option><option>JEE Main & Advanced</option><option>NEET Foundation</option></select>
+    <label for="mode">Preferred Mode</label>
+    <select id="mode"><option>Offline</option><option>Online</option><option>Hybrid</option></select>
+    <label for="message">Message</label><textarea id="message" placeholder="Any specific requirements?"></textarea>
+    <br><button class="btn" type="submit">Submit Registration</button>
+  </form>
+</div>
+</main>
+<footer>
+  <h3>BrightPath Tuition Classes</h3>
+  <p>Learn today. Grow tomorrow.</p>
+  <div class="social">
+    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <p>&copy; 2026 BrightPath Tuition Classes. All rights reserved.</p>
+</footer>
+</body>
+</html>

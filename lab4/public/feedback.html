@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback | BrightPath Tuition Classes</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="index.html">BrightPath Tuition</a>
+  <ul class="nav-links"><li><a class="" href="index.html">Home</a></li><li><a class="" href="registration.html">Registration</a></li><li><a class="" href="login.html">Login</a></li><li><a class="" href="courses.html">Courses</a></li><li><a class="active" href="feedback.html">Feedback</a></li><li><a class="" href="prices.html">Price Details</a></li></ul>
+</header>
+<main class="container">
+<h1 class="section-title">Student Feedback</h1>
+<div class="form-box">
+  <form onsubmit="alert('Thank you for your feedback!'); return false;">
+    <label for="name">Your Name</label><input id="name" type="text" placeholder="Enter your name" required>
+    <label for="course">Course</label>
+    <select id="course"><option>Class 9–10 Foundation</option><option>Class 11–12 Science</option><option>JEE Preparation</option><option>NEET Foundation</option></select>
+    <label for="rating">Rating</label>
+    <select id="rating"><option>5 - Excellent</option><option>4 - Very Good</option><option>3 - Good</option><option>2 - Needs Improvement</option><option>1 - Poor</option></select>
+    <label for="feedback">Your Feedback</label><textarea id="feedback" placeholder="Tell us about your learning experience..." required></textarea>
+    <br><button class="btn" type="submit">Send Feedback</button>
+  </form>
+</div>
+</main>
+<footer>
+  <h3>BrightPath Tuition Classes</h3>
+  <p>Learn today. Grow tomorrow.</p>
+  <div class="social">
+    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <p>&copy; 2026 BrightPath Tuition Classes. All rights reserved.</p>
+</footer>
+</body>
+</html>
